@@ -1,0 +1,3159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisan Saathi - Sustainable Farming Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #28a745;
+            --dark-green: #218838;
+            --light-bg: #f8f9fa;
+            --dark-text: #212529;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-text);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--dark-text);
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .feature-tabs {
+            background-color: var(--primary-green);
+            padding: 15px 0;
+        }
+
+        .feature-tabs .col-md-3 {
+            padding: 10px;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-tabs .col-md-3:last-child {
+            border-right: none;
+        }
+
+        .feature-tabs .col-md-3:hover {
+            background-color: var(--dark-green);
+            cursor: pointer;
+        }
+
+        .info-section {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+            position: relative;
+        }
+
+        .info-content-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 20px 0;
+        }
+
+        .info-section h2 {
+            color: var(--dark-text);
+            font-weight: 700;
+        }
+
+        .info-section p,
+        .info-section li {
+            color: var(--dark-text);
+        }
+
+        .info-img {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            object-fit: fill;
+            max-height: 500px;
+            width: 100%;
+        }
+
+        .services-section {
+            padding: 80px 0;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .progress-section {
+            padding: 60px 0;
+            background-color: var(--light-bg);
+        }
+
+        .progress {
+            height: 25px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .progress-bar {
+            background-color: var(--primary-green);
+            font-weight: 500;
+        }
+
+        footer {
+            padding: 30px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 60vh;
+            }
+
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+
+            .feature-tabs .col-md-3 {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                padding: 15px 0;
+            }
+
+            .info-content-box {
+                padding: 30px 20px;
+                margin: 10px 0;
+            }
+        }
+
+        .bg-image-section {
+            background-image: url('https://i.pinimg.com/736x/82/f4/05/82f405d44ce3029523b8ad37473adaed.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            position: relative;
+        }
+
+        .overlay-content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .navbar-custom {
+            background-color: #28a745 !important;
+            /* Bootstrap green */
+            box-shadow: 0 4px 8px rgba(54, 233, 45, 0.2);
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #d4f4dd !important;
+            /* Light green on hover */
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        .top-contact-bar {
+            background-color: var(--dark-green);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .top-contact-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .top-contact-bar {
+            background-color: #f8f9fa;
+            /* Light background */
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .top-contact-bar a {
+            text-decoration: none;
+            color: var(--dark-green);
+            font-weight: bold;
+        }
+
+        .top-contact-bar a:hover {
+            color: #007bff;
+        }
+
+        .language-dropdown {
+            background: none;
+            border: none;
+            color: #6c757d;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .language-dropdown:hover {
+            color: #28a745;
+        }
+
+        .navbar-brand span {
+            font-size: 24px;
+        }
+
+        .social-icon {
+            margin: 0 8px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .social-icon:hover {
+            color: #007bff;
+        }
+
+
+        .services-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .service-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            cursor: pointer;
+            height: 100%;
+            background: white;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+
+        .modal-content {
+            border-radius: 15px;
+            border: none;
+        }
+
+        .modal-header {
+            background-color: var(--primary-green);
+            color: white;
+            border-radius: 15px 15px 0 0 !important;
+        }
+
+        .close {
+            color: white;
+            opacity: 1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal.fade .modal-dialog {
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .service-img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-contact-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="tel:+9053135692"><i class="fas fa-phone-alt me-2"></i>+91 9053135692</a>
+                    <a href="mailto:helpkisansathi@gmail.com"><i
+                            class="fas fa-envelope me-2"></i>helpkisansathi@gmail.com</a>
+                </div>
+                <div class="col-md-6 text-md-end d-flex justify-content-md-end align-items-center">
+                    <!-- Language Selector -->
+                    <div class="me-3">
+                        <label id="lang-label" for="language-select" class="me-2">
+                            <i class="fas fa-globe me-1"></i>Choose Language:
+                        </label>
+                        <select id="language-select">
+                            <option value="en">English</option>
+                            <option value="hi">हिंदी</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="logo kisaan sathi.png" alt="Kissan Saathi Logo"
+                    style="height: 60px; width: auto; margin-right: 20px;">
+                <span class="fw-bold">Kissan Saathi</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a id="home-link" class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="feedback-link" class="nav-link" href="#feedback_card_ref">Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="about-link" class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="features-link" class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="contact-us-link" class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="logoutBtn" class="nav-link">Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="bg-image-section text-white text-center d-flex align-items-center justify-content-center" id="home">
+        <div class="overlay-content">
+            <h1 class="display-4" id="kisan-heading">Kisan Saathi - Sustainable Farming Solutions</h1>
+            <p class="lead" id="kisan-subheading">Empowering farmers with eco-friendly solutions for a greener tomorrow
+            </p>
+            <a href="#contact" id="contact-link" class="btn btn-success btn-lg px-4 me-2">Let's Talk</a>
+            <a href="#services" id="services-link" class="btn btn-outline-light btn-lg px-4">Learn More</a>
+        </div>
+    </section>
+
+    <section class="services-section" id="features">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 id="services-heading" class="mb-3 display-4 fw-bold text-gradient">Our Services</h2>
+                <p id="services-description" class="lead text-muted">Explore our comprehensive farming solutions</p>
+            </div>
+
+            <!-- Weather Service Section -->
+            <div class="weather-service-container mb-5">
+                <div class="row g-4">
+                    <!------ Weather Alert Card ------>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card weather-card text-center p-4 h-100" data-bs-toggle="modal"
+                            data-bs-target="#weatherModal">
+                            <div class="service-icon weather-icon mb-4">
+                                <i class="fas fa-cloud-sun-rain fa-4x"></i>
+                            </div>
+                            <h3 id="weather-alerts-heading" class="mt-3 fw-bold">Weather Alerts</h3>
+                            <p id="weather-alerts-description" class="mb-4 text-muted">Real-time weather conditions and
+                                forecasts for your farming area
+                            </p>
+
+                            <!-- Weather preview -->
+                            <div id="weatherPreview" class="d-none animate__animated animate__fadeIn">
+                                <div class="weather-preview-content p-3 rounded-3 shadow-sm">
+                                    <h5 id="weatherLocation" class="mb-2 fw-bold"></h5>
+                                    <div class="d-flex justify-content-center align-items-center mb-2">
+                                        <img id="weatherIcon" src="" alt="Weather icon" class="weather-icon-img">
+                                        <span id="weatherTemp" class="ms-3 display-6 fw-bold"></span>
+                                    </div>
+                                    <p id="weatherCondition" class="small mb-2"></p>
+                                    <p id="rainChance" class="small fw-bold text-primary"></p>
+                                </div>
+                            </div>
+
+                            <div class="weather-cta mt-auto pt-3">
+                                <span id="checkWeather"
+                                    class="default-text btn btn-outline-primary rounded-pill px-4">Check
+                                    Weather</span>
+                                <span id="updateWeather"
+                                    class="check-weather-text d-none btn btn-primary rounded-pill px-4">Update
+                                    Weather</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---- Main Weather Content ----->
+                    <div class="col-lg-8 col-md-6">
+                        <div class="weather-content-container p-4 rounded-4 shadow-sm h-100">
+                            <div class="search-box mb-4">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text bg-white"><i
+                                            class="fas fa-map-marker-alt text-primary"></i></span>
+                                    <input type="text" id="locationInput" class="form-control border-start-0"
+                                        placeholder="Enter your village or district...">
+                                    <button id="searchIcon" class="btn btn-primary" onclick="getWeather()">
+                                        <i class="fas fa-search me-2"></i>Search
+                                    </button>
+                                </div>
+                            </div>
+
+                            <section class="current-weather mb-4 p-4 rounded-3 bg-light" id="currentWeather">
+                                <div class="text-center py-5">
+                                    <i class="fas fa-cloud-sun fa-4x text-muted mb-3"></i>
+                                    <h4 id="weatherLocation" class="text-muted">Enter location to view weather data</h4>
+                                </div>
+                            </section>
+
+                            <section class="forecast-section">
+                                <h5 id="forecastHeading" class="mb-3 fw-bold"><i
+                                        class="fas fa-calendar-day me-2"></i>7-Day Forecast</h5>
+                                <div class="forecast-scroll-container">
+                                    <div class="forecast-scroll" id="forecastList"></div>
+                                </div>
+                            </section>
+
+                            <div class="chart-section mt-4">
+                                <canvas id="weatherChart" height="250"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Other Services ------>
+            <div class="row g-4">
+                <!----- Cropping Advice Card ------>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card text-center p-4 h-100" data-bs-toggle="modal" data-bs-target="#cropModal"
+                        style="background-image: url('https://i.pinimg.com/736x/92/c2/5c/92c25c86859422a89213d1108e094673.jpg'); filter: blur(0.3px);">
+                        <div class="service-icon mb-4">
+                            <div class="icon-container bg-success-light">
+                                <i class="fas fa-seedling text-success"></i>
+                            </div>
+                        </div>
+                        <h3 id="croppingAdvice" class="fw-bold" style="color: black;">Cropping Advice</h3>
+                        <p id="croppingAdviceDescription" class="fw-bold" style="color:black; ">Best crop practices and
+                            seasonal recommendations</p>
+                        <div class="mt-3">
+                            <span class="btn btn-outline-success rounded-pill px-4 learnMore">Learn More</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!----------- Crop Advice Modal ----------->
+                <div class="modal fade" id="cropModal" tabindex="-1" aria-labelledby="cropModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-success text-white">
+                                <h2 class="modal-title h5" id="cropModalLabel">Cropping Advice & Seasonal Calendar</h2>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!------ Nav tabs -->
+                                <ul class="nav nav-tabs" id="cropAdviceTabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="advice-tab" data-bs-toggle="tab"
+                                            data-bs-target="#advice" type="button" role="tab" aria-controls="advice"
+                                            aria-selected="true">Main Crop Advice</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="calendar-tab" data-bs-toggle="tab"
+                                            data-bs-target="#calendar" type="button" role="tab" aria-controls="calendar"
+                                            aria-selected="false">Seasonal Calendar</button>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab content -->
+                                <div class="tab-content p-3" id="cropAdviceContent">
+                                    <!-- Advice Tab -->
+                                    <div class="tab-pane fade show active" id="advice" role="tabpanel"
+                                        aria-labelledby="advice-tab">
+                                        <h3 id="croppingAdviceTab" class="mb-4">Essential Crop Recommendations</h3>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="card mb-3">
+                                                    <div class="card-header bg-light">
+                                                        <h4 id="riceCultivation" class="h5">Rice Cultivation</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <ul class="list-unstyled">
+                                                            <li id="riceCultivationAdvice1" class="mb-2"><i
+                                                                    class="fas fa-check-circle text-success me-2"></i>Optimal
+                                                                planting time: June-July (Kharif season)</li>
+                                                            <li id="riceCultivationAdvice2" class="mb-2"><i
+                                                                    class="fas fa-check-circle text-success me-2"></i>Soil
+                                                                requirement: Clayey or loamy with good water retention
+                                                            </li>
+                                                            <li id="riceCultivationAdvice3" class="mb-2"><i
+                                                                    class="fas fa-check-circle text-success me-2"></i>Recommended
+                                                                varieties: IR64, Swarna, Basmati</li>
+                                                            <li id="riceCultivationAdvice4" class="mb-2"><i
+                                                                    class="fas fa-check-circle text-success me-2"></i>Water
+                                                                management: Maintain 2-5 cm water depth</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card mb-3">
+                                                    <div class="card-header bg-light">
+                                                        <h4 id="wheatCultivation" class="h5">Wheat Farming</h4>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <ul class="list-unstyled">
+                                                            <li id="wheatCultivationAdvice1" class="mb-2"><i
+                                                                    class="fas fa-check-circle text-success me-2"></i>Best
+                                                                planting window: November-December (Rabi season)</li>
+                                                            <li id="wheatCultivationAdvice2" class="mb-2"><i
+                                                                    class="fas fa-check-circle text-success me-2"></i>Soil
+                                                                type: Well-drained loamy soil</li>
+                                                            <li id="wheatCultivationAdvice3" class="mb-2"><i
+                                                                    class="fas fa-check-circle text-success me-2"></i>Popular
+                                                                varieties: HD2967, PBW343, Lok1</li>
+                                                            <li id="wheatCultivationAdvice4" class="mb-2"><i
+                                                                    class="fas fa-check-circle text-success me-2"></i>Irrigation:
+                                                                4-5 critical stages</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="alert alert-info mt-3">
+                                            <i class="fas fa-info-circle me-2"></i> Always consider local weather
+                                            conditions and consult agricultural experts for region-specific advice.
+                                        </div>
+                                    </div>
+
+                                    <!-- Calendar Tab -->
+                                    <div class="tab-pane fade" id="calendar" role="tabpanel"
+                                        aria-labelledby="calendar-tab">
+                                        <h3 id="realTimeCropSeasonCalendar" class="mb-4">Real-Time Crop Season Calendar
+                                        </h3>
+                                        <div class="text-center mb-4">
+                                            <div id="currentMonthYear" class="h5 text-success"></div>
+                                            <div id="currentSeason" class="badge bg-success mb-3"></div>
+                                        </div>
+
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <caption id="cropSeasonCalendarCaption" class="visually-hidden">Crop
+                                                    season calendar showing Kharif,
+                                                    Rabi and Zaid crops by month</caption>
+                                                <thead class="table-success">
+                                                    <tr>
+                                                        <th scope="col">Month</th>
+                                                        <th scope="col">Kharif Crops</th>
+                                                        <th scope="col">Rabi Crops</th>
+                                                        <th scope="col">Zaid Crops</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="seasonCalendar">
+                                                    <!-- Will be populated by JavaScript -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="legend mt-3">
+                                            <span class="badge bg-primary me-2">Kharif</span> Monsoon season
+                                            (June-October)
+                                            <span class="badge bg-warning text-dark mx-2">Rabi</span> Winter season
+                                            (November-April)
+                                            <span class="badge bg-info text-dark ms-2">Zaid</span> Summer season
+                                            (March-June)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JavaScript for Crop Calendar -->
+                <!-- Updated JavaScript for Crop Calendar -->
+                <script>
+                    document.getElementById('logoutBtn').addEventListener('click', function () {
+                        window.location.href = 'forms.html';
+                    });
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Show logout button if a user is logged in (localStorage 'user' exists)
+                        const user = localStorage.getItem('user');
+                        const logoutBtn = document.getElementById('logoutBtn');
+                        if (user) {
+                            logoutBtn.style.display = 'block';
+                        } else {
+                            logoutBtn.style.display = 'none';
+                        }
+                    });
+                    document.getElementById('logoutBtn').addEventListener('click', function () {
+                        window.location.href = 'forms.html';
+                    });
+                    // Initialize crop calendar when modal is shown
+                    document.getElementById('cropModal').addEventListener('shown.bs.modal', function () {
+                        initCropCalendar();
+                    });
+
+                    function initCropCalendar() {
+                        const months = ["January", "February", "March", "April", "May", "June",
+                            "July", "August", "September", "October", "November", "December"];
+                        const now = new Date();
+                        const currentMonth = now.getMonth();
+                        const currentYear = now.getFullYear();
+
+                        // Update current month/year display
+                        document.getElementById('currentMonthYear').textContent = `${months[currentMonth]} ${currentYear}`;
+
+                        // Determine current season with more precise dates
+                        let currentSeason = '';
+                        let seasonBadgeClass = '';
+
+                        // Kharif: June 1 - October 31
+                        // Rabi: November 1 - April 30
+                        // Zaid: May 1 - May 31 (short summer season)
+                        if (currentMonth >= 5 && currentMonth <= 9) {
+                            currentSeason = 'Kharif Season (Monsoon Crops)';
+                            seasonBadgeClass = 'bg-primary';
+                        } else if (currentMonth >= 10 || currentMonth <= 3) {
+                            currentSeason = 'Rabi Season (Winter Crops)';
+                            seasonBadgeClass = 'bg-warning text-dark';
+                        } else {
+                            currentSeason = 'Zaid Season (Summer Crops)';
+                            seasonBadgeClass = 'bg-info text-dark';
+                        }
+
+                        const seasonElement = document.getElementById('currentSeason');
+                        seasonElement.textContent = currentSeason;
+                        seasonElement.className = `badge ${seasonBadgeClass} mb-3`;
+
+                        // Detailed monthly crop calendar data
+                        const calendarData = [
+                            {
+                                month: "January",
+                                kharif: "-",
+                                rabi: "Wheat (growth), Barley (growth), Mustard (flowering), Chickpea (pod formation)",
+                                zaid: "-",
+                                activities: "Irrigation for wheat, pest control in mustard, weeding in rabi crops"
+                            },
+                            {
+                                month: "February",
+                                kharif: "-",
+                                rabi: "Wheat (grain filling), Barley (maturity), Mustard (harvest), Potato (tuber growth)",
+                                zaid: "-",
+                                activities: "Harvest early mustard, final irrigation for wheat, monitor for aphids"
+                            },
+                            {
+                                month: "March",
+                                kharif: "-",
+                                rabi: "Wheat (harvest), Chickpea (harvest), Linseed (harvest)",
+                                zaid: "Cucumber (sowing), Bitter gourd (sowing), Watermelon (nursery)",
+                                activities: "Wheat harvesting starts, prepare land for zaid crops, sow summer vegetables"
+                            },
+                            {
+                                month: "April",
+                                kharif: "Land preparation begins",
+                                rabi: "-",
+                                zaid: "Watermelon (transplanting), Muskmelon (fruit development), Pumpkin (vine growth)",
+                                activities: "Harvest remaining rabi crops, irrigate zaid crops frequently, pest management"
+                            },
+                            {
+                                month: "May",
+                                kharif: "Nursery preparation for rice, procure seeds",
+                                rabi: "-",
+                                zaid: "Pumpkin (flowering), Cucumber (harvest), Okra (early sowing in some regions)",
+                                activities: "Prepare paddy fields, install water pumps, last harvest of summer crops"
+                            },
+                            {
+                                month: "June",
+                                kharif: "Rice (transplanting), Maize (sowing), Cotton (sowing), Soybean (sowing)",
+                                rabi: "-",
+                                zaid: "-",
+                                activities: "First monsoon planting, soil testing, fertilizer application"
+                            },
+                            {
+                                month: "July",
+                                kharif: "Rice (vegetative growth), Pulses (sowing), Bajra (sowing), Groundnut (sowing)",
+                                rabi: "-",
+                                zaid: "-",
+                                activities: "Weed control, gap filling in rice fields, first top dressing"
+                            },
+                            {
+                                month: "August",
+                                kharif: "Rice (tillering), Cotton (flowering), Soybean (pod formation), Sugarcane (growth)",
+                                rabi: "-",
+                                zaid: "-",
+                                activities: "Pest monitoring, second fertilizer dose, water management in heavy rains"
+                            },
+                            {
+                                month: "September",
+                                kharif: "Rice (flowering), Cotton (boll formation), Maize (harvest begins)",
+                                rabi: "Land preparation starts",
+                                zaid: "-",
+                                activities: "Drain excess water, prepare for rabi crops, harvest early maize"
+                            },
+                            {
+                                month: "October",
+                                kharif: "Rice (harvest), Cotton (picking), Groundnut (harvest)",
+                                rabi: "Wheat (sowing), Mustard (sowing), Barley (sowing)",
+                                zaid: "-",
+                                activities: "Main kharif harvest, sow early rabi crops, store grains properly"
+                            },
+                            {
+                                month: "November",
+                                kharif: "-",
+                                rabi: "Wheat (germination), Mustard (vegetative), Peas (vine growth), Gram (sowing)",
+                                zaid: "-",
+                                activities: "Irrigate newly sown crops, weed control, protect seedlings from frost"
+                            },
+                            {
+                                month: "December",
+                                kharif: "-",
+                                rabi: "Wheat (tillering), Mustard (flowering), Potato (planting), Onion (transplanting)",
+                                zaid: "-",
+                                activities: "First irrigation for wheat, frost protection measures, pest control"
+                            }
+                        ];
+
+                        const calendarBody = document.getElementById('seasonCalendar');
+                        calendarBody.innerHTML = ''; // Clear existing content
+
+                        calendarData.forEach((item, index) => {
+                            const row = document.createElement('tr');
+
+                            // Highlight current month
+                            if (index === currentMonth) {
+                                row.classList.add('table-primary');
+                            }
+
+                            // Add season class to entire row
+                            if (index >= 5 && index <= 9) { // Kharif months
+                                row.classList.add('kharif-row');
+                            } else if (index >= 10 || index <= 3) { // Rabi months
+                                row.classList.add('rabi-row');
+                            } else { // Zaid months
+                                row.classList.add('zaid-row');
+                            }
+
+                            row.innerHTML = `
+                <td><strong>${item.month}</strong></td>
+                <td>${item.kharif}</td>
+                <td>${item.rabi}</td>
+                <td>${item.zaid}</td>
+            `;
+                            calendarBody.appendChild(row);
+                        });
+
+                        // Add CSS for season rows
+                        const style = document.createElement('style');
+                        style.textContent = `
+            .kharif-row td:not(:first-child) { background-color: rgba(13, 110, 253, 0.1); }
+            .rabi-row td:not(:first-child) { background-color: rgba(255, 193, 7, 0.1); }
+            .zaid-row td:not(:first-child) { background-color: rgba(23, 162, 184, 0.1); }
+            .table-primary { font-weight: bold; }
+        `;
+                        document.head.appendChild(style);
+                    }
+                </script>
+
+                <!-- Feedback & Review Card -->
+                <!-- Feedback Card -->
+                <div id="feedback_card_ref" class="col-lg-4 col-md-6">
+                    <div class="service-card text-center p-4 h-100" data-bs-toggle="modal"
+                        data-bs-target="#feedbackModal"
+                        style="background-image: url('https://i.pinimg.com/736x/c2/ad/16/c2ad1612ea6f6fe4b4c3eba89667e24b.jpg');background-size: cover; background-position: center; background-repeat: no-repeat;">
+                        <div class="service-icon mb-4">
+                            <div>
+                                <i>.</i>
+                            </div>
+                        </div>
+                        <h3 id="feedback_card" class="fw-bold">Feedback & Review</h3>
+                        <p id="feedback_card_description" class="fw-bold bg-primary-light">Share your experience and
+                            suggestions</p>
+                        <div class="mt-3">
+                            <span id="feedback_card_button" class="btn btn-outline-info rounded-pill px-9 ">Give
+                                Feedback</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback Modal -->
+                <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-info text-white">
+                                <h2 class="modal-title fw-bold" id="feedbackModalLabel">Share Your Feedback</h2>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="feedbackForm" class="p-4 p-md-5 form-section"
+                                    action="https://api.web3forms.com/submit" method="POST">
+                                    <input type="hidden" name="access_key" value="8a44b134-22d9-4b41-8628-178097067fbf">
+                                    <input type="hidden" name="redirect" value="false">
+                                    <input type="hidden" name="from_name" value="Website Feedback Form">
+                                    <input type="hidden" name="subject" value="New Feedback Submission">
+                                    <input type="hidden" name="replyto" value="%email%">
+                                    <!-- Will be replaced with user's email -->
+
+                                    <div class="row g-3">
+                                        <!-- Name -->
+                                        <div class="col-md-6">
+                                            <label id="feedback_name_label" for="name" class="form-label">Your Name
+                                                <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="name" name="Name" required>
+                                            <div class="invalid-feedback">Please provide your name.</div>
+                                        </div>
+
+                                        <!-- Email -->
+                                        <div class="col-md-6">
+                                            <label id="feedback_email_label" for="email" class="form-label">Email
+                                                Address <span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" id="email" name="Email" required>
+                                            <div class="invalid-feedback">Please provide a valid email.</div>
+                                        </div>
+
+                                        <!-- Feedback Type -->
+                                        <div class="col-md-6">
+                                            <label id="feedback_type_label" for="feedbackType"
+                                                class="form-label">Feedback Type <span
+                                                    class="text-danger">*</span></label>
+                                            <select class="form-select" id="feedbackType" name="FeedbackType" required>
+                                                <option id="feedback_type_option1" value="" selected disabled>Select
+                                                    type</option>
+                                                <option id="feedback_type_option2" value="Suggestion">Suggestion
+                                                </option>
+                                                <option id="feedback_type_option3" value="Complaint">Complaint</option>
+                                                <option id="feedback_type_option4" value="Appreciation">Appreciation
+                                                </option>
+                                                <option id="feedback_type_option5" value="Bug Report">Bug Report
+                                                </option>
+                                                <option id="feedback_type_option6" value="Other">Other</option>
+                                            </select>
+                                            <div class="invalid-feedback">Please select feedback type.</div>
+                                        </div>
+
+                                        <!-- Subject -->
+                                        <div class="col-md-6">
+                                            <label id="feedback_subject_label" for="subject" class="form-label">Subject
+                                                <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="Subject" name="subject"
+                                                required>
+                                            <div class="invalid-feedback">Please provide a subject.</div>
+                                        </div>
+
+                                        <!-- Message -->
+                                        <div class="col-12">
+                                            <label id="feedback_message_label" for="message" class="form-label">Your
+                                                Feedback <span class="text-danger">*</span></label>
+                                            <textarea class="form-control" id="message" name="Message" rows="5"
+                                                required></textarea>
+                                            <div class="invalid-feedback">Please provide your feedback.</div>
+                                        </div>
+
+                                        <!-- Contact Permission -->
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="contactPermission"
+                                                    name="contactPermission">
+                                                <label id="feedback_contact_label" class="form-check-label"
+                                                    for="contactPermission">
+                                                    I agree to be contacted for follow-up regarding my feedback
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Honeypot for spam protection -->
+                                        <input type="checkbox" name="botcheck" id="" style="display: none;">
+                                    </div>
+
+                                    <div class="mt-4 text-center">
+                                        <button id="feedback_submit_button" type="submit"
+                                            class="btn btn-info px-5 py-2 rounded-pill">
+                                            <i class="fas fa-paper-plane me-2"></i> Submit Feedback
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <!-- Loading Indicator -->
+                                <div id="feedbackLoading" class="text-center py-4" style="display: none;">
+                                    <div class="spinner-border text-info" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                    <p class="mt-3">Submitting your feedback...</p>
+                                </div>
+
+                                <!-- Success Message -->
+                                <div id="feedbackSuccess" class="text-center py-5" style="display: none;">
+                                    <div class="checkmark mb-3">✅</div>
+                                    <h4 id="feedback_thank_you" class="text-success">Thank You!</h4>
+                                    <p id="feedback_thank_you_description">Your feedback has been submitted
+                                        successfully.</p>
+                                    <button id="feedback_thank_you_button" type="button" class="btn btn-success mt-3"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+
+                                <!-- Error Message -->
+                                <div id="feedbackError" class="text-center py-5" style="display: none;">
+                                    <div class="error-icon mb-3">❌</div>
+                                    <h4 id="feedback_error" class="text-danger">Error!</h4>
+                                    <p id="errorMessage">There was a problem submitting your feedback.</p>
+                                    <button id="feedback_error_retry_button" type="button" class="btn btn-danger mt-3"
+                                        onclick="resetFeedbackForm()">Try
+                                        Again</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <script>
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const feedbackForm = document.getElementById('feedbackForm');
+                        const feedbackLoading = document.getElementById('feedbackLoading');
+                        const feedbackSuccess = document.getElementById('feedbackSuccess');
+                        const feedbackError = document.getElementById('feedbackError');
+                        const errorMessage = document.getElementById('errorMessage');
+
+                        // Google Apps Script deployment URL
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbwxiX2mLT4vgbbPFUpOLyz03ep7RuDXl3OB3YmwqKr06GeVIyLbnQzxvylE7o9FVoM/exec';
+
+                        feedbackForm.addEventListener('submit', async function (e) {
+                            e.preventDefault();
+
+                            // Validate form
+                            if (!feedbackForm.checkValidity()) {
+                                e.stopPropagation();
+                                feedbackForm.classList.add('was-validated');
+                                return;
+                            }
+
+                            // Show loading, hide form
+                            feedbackForm.style.display = 'none';
+                            feedbackLoading.style.display = 'block';
+                            feedbackSuccess.style.display = 'none';
+                            feedbackError.style.display = 'none';
+                            const feedbackData = {
+                                name: document.getElementById('name').value,
+                                email: document.getElementById('email').value,
+                                type: document.getElementById('feedbackType').value,
+                                subject: document.getElementById('Subject').value,
+                                message: document.getElementById('message').value,
+                                contactPermission: document.getElementById('contactPermission').checked
+                            };
+
+                            // Submit to spreadsheet
+                            submitFeedbackToSpreadsheet(feedbackData);
+                        });
+
+                        $('#feedbackModal').on('hidden.bs.modal', function () {
+                            resetFeedbackForm();
+                        });
+
+                        function resetFeedbackForm() {
+                            feedbackForm.style.display = 'block';
+                            feedbackLoading.style.display = 'none';
+                            feedbackSuccess.style.display = 'none';
+                            feedbackError.style.display = 'none';
+                            feedbackForm.classList.remove('was-validated');
+                        }
+                    });
+                    feedbackForm.reset();
+                    //                
+                </script>
+                <style>
+                    /* Modal styles */
+                    #feedbackModal .modal-content {
+                        border-radius: 15px;
+                        overflow: hidden;
+                    }
+
+                    #feedbackModal .modal-header {
+                        padding: 1.5rem;
+                    }
+
+                    #feedbackModal .modal-body {
+                        padding: 2rem;
+                    }
+
+                    /* Form styles */
+                    #feedbackForm label {
+                        font-weight: 500;
+                    }
+
+                    #feedbackForm .form-control,
+                    #feedbackForm .form-select {
+                        padding: 0.75rem 1rem;
+                        border-radius: 0.5rem;
+                    }
+
+                    /* Validation styles */
+                    .was-validated .form-control:invalid,
+                    .was-validated .form-select:invalid {
+                        border-color: #dc3545;
+                    }
+
+                    .was-validated .form-control:valid,
+                    .was-validated .form-select:valid {
+                        border-color: #198754;
+                    }
+
+                    /* Success message */
+                    #feedbackSuccess {
+                        padding: 2rem;
+                        border-radius: 0.5rem;
+                    }
+
+                    #feedbackSuccess i {
+                        color: #198754;
+                    }
+
+                    /* Error message */
+                    #feedbackError {
+                        padding: 2rem;
+                        border-radius: 0.5rem;
+                    }
+
+                    #feedbackError i {
+                        color: #dc3545;
+                    }
+
+                    .checkmark {
+                        font-size: 4rem;
+                        color: #28a745;
+                    }
+
+                    .error-icon {
+                        font-size: 4rem;
+                        color: #dc3545;
+                    }
+
+                    #feedbackSuccess,
+                    #feedbackError {
+                        animation: fadeIn 0.5s ease-out;
+                    }
+
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                            transform: translateY(20px);
+                        }
+
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
+                    /* Responsive adjustments */
+                    @media (max-width: 768px) {
+                        #feedbackModal .modal-dialog {
+                            margin: 0.5rem;
+                        }
+
+                        #feedbackModal .modal-body {
+                            padding: 1.5rem;
+                        }
+
+                        #feedbackForm {
+                            padding: 1rem !important;
+                        }
+                    }
+                </style>
+                <!-- Govt. Schemes Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card text-center p-4 h-100" data-bs-toggle="modal"
+                        data-bs-target="#schemesModal"
+                        style="background-image: url('https://i.pinimg.com/736x/ea/b5/f1/eab5f1e89062a5154738c1f679af010a.jpg');background-size: cover; background-position: center; background-repeat: no-repeat;">
+                        <div class="service-icon mb-4">
+                            <div class="icon-container bg-warning-light">
+                                <i class="fas fa-landmark text-warning"></i>
+                            </div>
+                        </div>
+                        <h3 id="govtSchemesHeading" class="fw-bold">Govt. Schemes</h3>
+                        <p id="govtSchemesDescription" class="text-muted">Agricultural programs and subsidies</p>
+                        <div class="mt-3">
+                            <span id="govtSchemesButton" class="btn btn-outline-warning rounded-pill px-4">View
+                                Schemes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Schemes Modal -->
+                <div class="modal fade" id="schemesModal" tabindex="-1" aria-labelledby="schemesModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary text-white">
+                                <h2 class="modal-title fw-bold" id="schemesModalLabel">2025-26 Union Budget Schemes</h2>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Search and Filter Section -->
+                                <div class="container mb-4">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <input type="text" class="form-control" id="schemeSearchModal"
+                                                placeholder="Search schemes...">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <select class="form-select" id="categoryFilterModal">
+                                                <option id="schemeType1" value="">All Categories</option>
+                                                <option id="schemeType2" value="Agriculture">Agriculture</option>
+                                                <option id="schemeType3" value="Rural Development">Rural Development
+                                                </option>
+                                                <option id="schemeType4" value="MSME">MSME</option>
+                                                <option id="schemeType5" value="Healthcare">Healthcare</option>
+                                                <option id="schemeType6" value="Education">Education</option>
+                                                <option id="schemeType7" value="Infrastructure">Infrastructure</option>
+                                                <option id="schemeType8" value="Energy">Energy</option>
+                                                <option id="schemeType9" value="Transport">Transport</option>
+                                                <option id="schemeType10" value="Housing">Housing</option>
+                                                <option id="schemeType11" value="Social Security">Social Security
+                                                </option>
+                                                <option id="schemeType12" value="Culture">Culture</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Schemes Grid -->
+                                <div class="container">
+                                    <div class="row g-4" id="schemesContainer">
+                                        <!-- Scheme 1 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-success">
+                                                <div class="card-header bg-success text-white">
+                                                    <h5 id="scheme1heading" class="card-title mb-0">PM Dhan-Dhaanya
+                                                        Krishi Yojana</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme1description" class="card-text">
+                                                        <strong>Objective:</strong> Improve
+                                                        agricultural productivity and rural prosperity.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme1coverage" class="list-group-item">Coverage: 100
+                                                            low-productivity
+                                                            districts</li>
+                                                        <li id="scheme1focus" class="list-group-item">Focus: Crop
+                                                            diversification &
+                                                            storage facilities</li>
+                                                        <li id="scheme1beneficiaries" class="list-group-item">
+                                                            Beneficiaries: 1.7 crore farmers
+                                                        </li>
+                                                    </ul>
+                                                    <span id="schemeType2" class="badge bg-primary">Agriculture</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 2 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-warning">
+                                                <div class="card-header bg-warning text-dark">
+                                                    <h5 id="scheme2heading" class="card-title mb-0">Rural Prosperity
+                                                        Programme</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme2description" class="card-text">
+                                                        <strong>Objective:</strong> Address rural
+                                                        underemployment and develop rural economies.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme2targets" class="list-group-item">Targets: Women,
+                                                            young & small
+                                                            farmers</li>
+                                                        <li id="scheme2components" class="list-group-item">Components:
+                                                            Skilling & employment
+                                                            creation</li>
+                                                        <li id="scheme2aim" class="list-group-item">Aim: Reduce forced
+                                                            migration</li>
+                                                    </ul>
+                                                    <span id="schemeType3" class="badge bg-warning text-dark">Rural
+                                                        Development</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 3 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-info">
+                                                <div class="card-header bg-info text-dark">
+                                                    <h5 id="scheme3heading" class="card-title mb-0">Aatmanirbharta in
+                                                        Pulses</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme3description" class="card-text">
+                                                        <strong>Objective:</strong> Make India
+                                                        self-reliant in pulses production.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme3component1" class="list-group-item">Duration: 6
+                                                            years</li>
+                                                        <li id="scheme3component2" class="list-group-item">Focus: Tur,
+                                                            Urad, Masoor pulses</li>
+                                                        <li id="scheme3component3" class="list-group-item">Goal:
+                                                            Climate-resilient seeds</li>
+                                                    </ul>
+                                                    <span id="schemeType2" class="badge bg-primary">Agriculture</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 4 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-success">
+                                                <div class="card-header bg-success text-white">
+                                                    <h5 id="scheme4heading" class="card-title mb-0">Vegetables & Fruits
+                                                        Programme</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme4description" class="card-text">
+                                                        <strong>Objective:</strong> Enhance production
+                                                        and farmers' earnings.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme4component1" class="list-group-item">Support
+                                                            processing & marketing</li>
+                                                        <li id="scheme4component2" class="list-group-item">Formation of
+                                                            FPOs</li>
+                                                        <li id="scheme4component3" class="list-group-item">State
+                                                            partnerships</li>
+                                                    </ul>
+                                                    <span id="schemeType2" class="badge bg-primary">Agriculture</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 5 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-primary">
+                                                <div class="card-header bg-primary text-white">
+                                                    <h5 id="scheme5heading" class="card-title mb-0">High Yielding Seeds
+                                                        Mission</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme5description" class="card-text">
+                                                        <strong>Objective:</strong> Enhance
+                                                        productivity and pest resilience.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme5component1" class="list-group-item">100+ seed
+                                                            varieties released</li>
+                                                        <li id="scheme5component2" class="list-group-item">Strengthen
+                                                            seed research</li>
+                                                        <li id="scheme5component3" class="list-group-item">Improve
+                                                            commercial availability</li>
+                                                    </ul>
+                                                    <span id="schemeType2" class="badge bg-primary">Agriculture</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 6 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-info">
+                                                <div class="card-header bg-info text-dark">
+                                                    <h5 id="scheme6heading" class="card-title mb-0">Cotton Productivity
+                                                        Mission</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme6description" class="card-text">
+                                                        <strong>Objective:</strong> Boost extra-long
+                                                        staple cotton productivity.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme6component1" class="list-group-item">Duration: 5
+                                                            years</li>
+                                                        <li id="scheme6component2" class="list-group-item">Sustainable
+                                                            farming practices</li>
+                                                        <li id="scheme6component3" class="list-group-item">Strengthen
+                                                            textile supply chain</li>
+                                                    </ul>
+                                                    <span id="schemeType2" class="badge bg-primary">Agriculture</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 7 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-success">
+                                                <div class="card-header bg-success text-white">
+                                                    <h5 id="scheme7heading" class="card-title mb-0">Enhanced Kisan
+                                                        Credit Cards</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme7description" class="card-text">
+                                                        <strong>Objective:</strong> Boost short-term
+                                                        agricultural credit.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme7component1" class="list-group-item">New limit: ₹5
+                                                            lakh (from ₹3 lakh)
+                                                        </li>
+                                                        <li id="scheme7component2" class="list-group-item">Modified
+                                                            Interest Subvention Scheme
+                                                        </li>
+                                                    </ul>
+                                                    <span id="schemeType2" class="badge bg-primary">Agriculture</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 8 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-warning">
+                                                <div class="card-header bg-warning text-dark">
+                                                    <h5 id="scheme8heading" class="card-title mb-0">India Post for Rural
+                                                        Economy</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme8description" class="card-text">
+                                                        <strong>Objective:</strong> Expand rural
+                                                        services through India Post.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme8component1" class="list-group-item">Digital
+                                                            services & DBT</li>
+                                                        <li id="scheme8component2" class="list-group-item">EMI
+                                                            collections</li>
+                                                        <li id="scheme8component3" class="list-group-item">Credit for
+                                                            micro-enterprises</li>
+                                                    </ul>
+                                                    <span id="schemeType3" class="badge bg-warning text-dark">Rural
+                                                        Development</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 9 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-primary">
+                                                <div class="card-header bg-primary text-white">
+                                                    <h5 id="scheme9heading" class="card-title mb-0">Credit Cards for
+                                                        Micro Enterprises</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme9description" class="card-text">
+                                                        <strong>Objective:</strong> Boost financial
+                                                        inclusion.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme9component1" class="list-group-item">Limit: ₹5
+                                                            lakh for Udyam-registered
+                                                        </li>
+                                                        <li id="scheme9component2" class="list-group-item">Target: 10
+                                                            lakh cards in first year
+                                                        </li>
+                                                    </ul>
+                                                    <span id="schemeType4" class="badge bg-info text-dark">MSME</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 10 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-success">
+                                                <div class="card-header bg-success text-white">
+                                                    <h5 id="scheme10heading" class="card-title mb-0">Scheme for
+                                                        First-Time Entrepreneurs</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme10description" class="card-text">
+                                                        <strong>Objective:</strong> Empower women, SC &
+                                                        ST entrepreneurs.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme10component1" class="list-group-item">Loan up to
+                                                            ₹2 crore</li>
+                                                        <li id="scheme10component2" class="list-group-item">Target: 5
+                                                            lakh entrepreneurs</li>
+                                                    </ul>
+                                                    <span id="schemeType4" class="badge bg-info text-dark">MSME</span>
+                                                    <span class="badge bg-secondary">Inclusive Growth</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 11 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-danger">
+                                                <div class="card-header bg-danger text-white">
+                                                    <h5 id="scheme11heading" class="card-title mb-0">National
+                                                        Manufacturing Mission</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme11description" class="card-text">
+                                                        <strong>Objective:</strong> Drive industrial
+                                                        growth under Make in India.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme11component1" class="list-group-item">Focus: Clean
+                                                            tech, solar, EVs, wind
+                                                        </li>
+                                                        <li id="scheme11component2" class="list-group-item">5 key focus
+                                                            areas</li>
+                                                    </ul>
+                                                    <span class="badge bg-danger">Manufacturing</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 12 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-info">
+                                                <div class="card-header bg-info text-dark">
+                                                    <h5 id="scheme12heading" class="card-title mb-0">Saksham Anganwadi &
+                                                        Poshan 2.0</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme12description" class="card-text">
+                                                        <strong>Objective:</strong> Nutritional support
+                                                        programme.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme12component1" class="list-group-item">8 crore
+                                                            children</li>
+                                                        <li id="scheme12component2" class="list-group-item">1 crore
+                                                            pregnant women</li>
+                                                        <li id="scheme12component3" class="list-group-item">20 lakh
+                                                            adolescent girls</li>
+                                                    </ul>
+                                                    <span class="badge bg-secondary">Healthcare</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 13 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-primary">
+                                                <div class="card-header bg-primary text-white">
+                                                    <h5 id="scheme13heading" class="card-title mb-0">Atal Tinkering Labs
+                                                        Expansion</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme13description" class="card-text">
+                                                        <strong>Objective:</strong> Foster innovation
+                                                        in schools.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme13component1" class="list-group-item">50,000 labs
+                                                            in 5 years</li>
+                                                        <li id="scheme13component2" class="list-group-item">Government
+                                                            schools focus</li>
+                                                    </ul>
+                                                    <span id="schemeType6" class="badge bg-dark">Education</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 14 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-warning">
+                                                <div class="card-header bg-warning text-dark">
+                                                    <h5 id="scheme14heading" class="card-title mb-0">Social Security for
+                                                        Gig Workers</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme14description" class="card-text">
+                                                        <strong>Objective:</strong> Provide welfare to
+                                                        gig workers.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme14component1" class="list-group-item">Target: 1
+                                                            crore workers</li>
+                                                        <li id="scheme14component2" class="list-group-item">PM Jan
+                                                            Arogya health insurance</li>
+                                                        <li id="scheme14component3" class="list-group-item">e-Shram
+                                                            registration</li>
+                                                    </ul>
+                                                    <span id="schemeType11" class="badge bg-secondary">Social
+                                                        Security</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 15 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-danger">
+                                                <div class="card-header bg-danger text-white">
+                                                    <h5 id="scheme15heading" class="card-title mb-0">PM Gati Shakti Data
+                                                        Access</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme15description" class="card-text">
+                                                        <strong>Objective:</strong> Improve PPP
+                                                        infrastructure projects.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme15component1" class="list-group-item">Private
+                                                            sector access to data</li>
+                                                        <li id="scheme15component2" class="list-group-item">Better
+                                                            project planning</li>
+                                                    </ul>
+                                                    <span id="schemeType7" class="badge bg-danger">Infrastructure</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 16 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-info">
+                                                <div class="card-header bg-info text-dark">
+                                                    <h5 id="scheme16heading" class="card-title mb-0">Jal Jeevan Mission
+                                                        Extension</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme16description" class="card-text">
+                                                        <strong>Objective:</strong> 100% rural tap
+                                                        water coverage.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme16component1" class="list-group-item">New target:
+                                                            2028</li>
+                                                        <li id="scheme16component2" class="list-group-item">Focus on
+                                                            water quality</li>
+                                                    </ul>
+                                                    <span class="badge bg-info text-dark">Water</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 17 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-primary">
+                                                <div class="card-header bg-primary text-white">
+                                                    <h5 id="scheme17heading" class="card-title mb-0">Urban Challenge
+                                                        Fund</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme17description" class="card-text">
+                                                        <strong>Objective:</strong> Support urban
+                                                        development.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme17component1" class="list-group-item">Corpus: ₹1
+                                                            lakh crore</li>
+                                                        <li id="scheme17component2" class="list-group-item">Sanitation &
+                                                            city revitalization
+                                                        </li>
+                                                    </ul>
+                                                    <span id="schemeType8" class="badge bg-primary">Urban
+                                                        Development</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 18 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-danger">
+                                                <div class="card-header bg-danger text-white">
+                                                    <h5 id="scheme18heading" class="card-title mb-0">Nuclear Energy
+                                                        Mission</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme18description" class="card-text">
+                                                        <strong>Objective:</strong> 100 GW nuclear
+                                                        capacity by 2047.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme18component1" class="list-group-item">₹20,000
+                                                            crore for SMR R&D</li>
+                                                        <li id="scheme18component2" class="list-group-item">Part of
+                                                            Viksit Bharat</li>
+                                                    </ul>
+                                                    <span id="schemeType8" class="badge bg-danger">Energy</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 19 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-info">
+                                                <div class="card-header bg-info text-dark">
+                                                    <h5 id="scheme19heading" class="card-title mb-0">Maritime
+                                                        Development Fund</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme19description" class="card-text">
+                                                        <strong>Objective:</strong> Enhance shipping
+                                                        sector.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme19component1" class="list-group-item">Corpus:
+                                                            ₹25,000 crore</li>
+                                                        <li id="scheme19component2" class="list-group-item">Boost
+                                                            competitiveness</li>
+                                                    </ul>
+                                                    <span id="schemeType9"
+                                                        class="badge bg-info text-dark">Transport</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 20 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-primary">
+                                                <div class="card-header bg-primary text-white">
+                                                    <h5 id="scheme20heading" class="card-title mb-0">Modified UDAN
+                                                        Scheme</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme20description" class="card-text">
+                                                        <strong>Objective:</strong> Boost regional air
+                                                        connectivity.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme20component1" class="list-group-item">120 new
+                                                            routes</li>
+                                                        <li id="scheme20component2" class="list-group-item">4 crore
+                                                            passenger target</li>
+                                                    </ul>
+                                                    <span class="badge bg-primary">Aviation</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 21 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-warning">
+                                                <div class="card-header bg-warning text-dark">
+                                                    <h5 id="scheme21heading" class="card-title mb-0">SWAMIH Fund 2</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme21description" class="card-text">
+                                                        <strong>Objective:</strong> Complete stressed
+                                                        housing projects.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme21component1" class="list-group-item">Corpus:
+                                                            ₹15,000 crore</li>
+                                                        <li id="scheme21component2" class="list-group-item">1 lakh
+                                                            dwelling units target</li>
+                                                    </ul>
+                                                    <span id="schemeType10"
+                                                        class="badge bg-warning text-dark">Housing</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 22 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-success">
+                                                <div class="card-header bg-success text-white">
+                                                    <h5 id="scheme22heading" class="card-title mb-0">Heal in India
+                                                        Programme</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme22description" class="card-text">
+                                                        <strong>Objective:</strong> Promote medical
+                                                        tourism.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme22component1" class="list-group-item">Capacity
+                                                            building</li>
+                                                        <li id="scheme22component2" class="list-group-item">Visa
+                                                            relaxations</li>
+                                                    </ul>
+                                                    <span id="schemeType5" class="badge bg-success">Healthcare</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Scheme 23 -->
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card h-100 border-dark">
+                                                <div class="card-header bg-dark text-white">
+                                                    <h5 id="scheme23heading" class="card-title mb-0">Gyan Bharatam
+                                                        Mission</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p id="scheme23description" class="card-text">
+                                                        <strong>Objective:</strong> Conserve India's
+                                                        manuscript heritage.</p>
+                                                    <ul class="list-group list-group-flush mb-3">
+                                                        <li id="scheme23component1" class="list-group-item">1 crore+
+                                                            manuscripts</li>
+                                                        <li id="scheme23component2" class="list-group-item">Digitization
+                                                            focus</li>
+                                                    </ul>
+                                                    <span id="schemeType12" class="badge bg-dark">Culture</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="closeModalButton" type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    // Search and filter functionality for the modal
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const searchInputModal = document.getElementById('schemeSearchModal');
+                        const categoryFilterModal = document.getElementById('categoryFilterModal');
+                        const cardsModal = document.querySelectorAll('#schemesContainer .col-md-6.col-lg-4');
+
+                        function filterSchemesModal() {
+                            const searchTerm = searchInputModal.value.toLowerCase();
+                            const selectedCategory = categoryFilterModal.value;
+
+                            cardsModal.forEach(card => {
+                                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                                const badges = Array.from(card.querySelectorAll('.badge')).map(badge => badge.textContent);
+
+                                const matchesSearch = title.includes(searchTerm);
+                                const matchesCategory = selectedCategory === '' || badges.includes(selectedCategory);
+
+                                if (matchesSearch && matchesCategory) {
+                                    card.style.display = 'block';
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            });
+                        }
+
+                        searchInputModal.addEventListener('input', filterSchemesModal);
+                        categoryFilterModal.addEventListener('change', filterSchemesModal);
+
+                        // Reset filters when modal is closed
+                        $('#schemesModal').on('hidden.bs.modal', function () {
+                            searchInputModal.value = '';
+                            categoryFilterModal.value = '';
+                            filterSchemesModal();
+                        });
+                    });
+                </script>
+
+                <style>
+                    /* Modal styles */
+                    #schemesModal .modal-content {
+                        border-radius: 15px;
+                        overflow: hidden;
+                    }
+
+                    #schemesModal .modal-header {
+                        padding: 1.5rem;
+                    }
+
+                    #schemesModal .modal-body {
+                        padding: 2rem;
+                    }
+
+                    /* Card hover effect */
+                    #schemesContainer .card {
+                        transition: transform 0.3s, box-shadow 0.3s;
+                        cursor: pointer;
+                    }
+
+                    #schemesContainer .card:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                    }
+
+                    /* Badge styles */
+                    #schemesContainer .badge {
+                        margin-right: 5px;
+                        margin-bottom: 5px;
+                        font-size: 0.8rem;
+                        padding: 0.35em 0.65em;
+                    }
+
+                    /* Scrollable modal content */
+                    .modal-dialog-scrollable .modal-body {
+                        max-height: 70vh;
+                        overflow-y: auto;
+                    }
+                </style>
+
+
+
+                <!-- Farming Tips Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card text-center p-4 h-100" data-bs-toggle="modal" data-bs-target="#tipsModal"
+                        style="background-image: url('https://i.pinimg.com/736x/96/dc/55/96dc55675e59412eabb985a35b52fb30.jpg');background-size: cover; background-position: center; background-repeat: no-repeat;">
+                        <div class="service-icon mb-4">
+                            <div class="icon-container bg-danger-light">
+                                <i class="fas fa-lightbulb text-danger"></i>
+                            </div>
+                        </div>
+                        <h3 id="farmingTips" class="fw-bold">Farming Tips</h3>
+                        <p id="farmingTipsDesc" class="fw-bold" style="color: black;">Valuable insights to improve
+                            productivity</p>
+                        <div class="mt-3">
+                            <span id="farmingTipsBtn" class="btn btn-outline-danger rounded-pill px-4">Get Tips</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tips Modal -->
+                <div class="modal fade" id="tipsModal" tabindex="-1" aria-labelledby="tipsModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-danger text-white">
+                                <h5 class="modal-title" id="tipsModalLabel"><i class="fas fa-lightbulb me-2"></i>
+                                    Farming Tips</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card h-100 border-0 shadow-sm">
+                                            <div class="card-body">
+                                                <h5 id="tip1Header" class="card-title text-danger"><i
+                                                        class="fas fa-seedling me-2"></i>
+                                                    Crop Rotation</h5>
+                                                <p id="tip1Description" class="card-text">Rotate your crops annually to
+                                                    maintain soil
+                                                    fertility and reduce pest infestations. A good rotation might
+                                                    include legumes, leafy vegetables, and root crops.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card h-100 border-0 shadow-sm">
+                                            <div class="card-body">
+                                                <h5 id="tip2Header" class="card-title text-danger"><i
+                                                        class="fas fa-tint me-2"></i>
+                                                    Water Management</h5>
+                                                <p id="tip2Description" class="card-text">Use drip irrigation or soaker
+                                                    hoses to deliver
+                                                    water directly to plant roots, reducing evaporation and water waste.
+                                                    Water early in the morning for best results.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card h-100 border-0 shadow-sm">
+                                            <div class="card-body">
+                                                <h5 id="tip3Header" class="card-title text-danger"><i
+                                                        class="fas fa-bug me-2"></i> Pest
+                                                    Control</h5>
+                                                <p id="tip3Description" class="card-text">Introduce beneficial insects
+                                                    like ladybugs and
+                                                    lacewings to control pests naturally. Use companion planting to
+                                                    deter pests without chemicals.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card h-100 border-0 shadow-sm">
+                                            <div class="card-body">
+                                                <h5 id="tip4Header" class="card-title text-danger"><i
+                                                        class="fas fa-compost me-2"></i>
+                                                    Soil Health</h5>
+                                                <p id="tip4Description" class="card-text">Regularly add organic matter
+                                                    like compost to
+                                                    improve soil structure. Test your soil annually to monitor pH and
+                                                    nutrient levels.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="tips_modal_close_button" type="button" class="btn btn-outline-secondary"
+                                    data-bs-dismiss="modal">Close</button>
+                                <button id="tips_modal_save_button" type="button" class="btn btn-danger">Save
+                                    Tips</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Help Card -->
+                <!-- Replace the Search Help Card with Fertilizer Suggestions Card -->
+                <div class="col-lg-4 col-md-6">
+    <div class="service-card text-center p-4 h-100" data-bs-toggle="modal" data-bs-target="#farmingTutorialsModal"
+        style="background-image: url('https://i.pinimg.com/736x/0b/ff/ab/0bffabd760343521858bf6261c15fc83.jpg');background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="service-icon mb-4">
+            <div class="icon-container bg-primary-light">
+                <i class="fas fa-seedling text-primary"></i>
+            </div>
+        </div>
+        <h3 id="farming_tutorials_header" class="fw-bold">Farming Tutorials</h3>
+        <p id="farming_tutorials_description" class="fw-bold">Learn farming techniques with video guides</p>
+        <div class="mt-3">
+            <span id="farming_tutorials_button" class="btn btn-outline-primary rounded-pill px-4">View Tutorials</span>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Farming Tutorials -->
+<div class="modal fade" id="farmingTutorialsModal" tabindex="-1" aria-labelledby="farmingTutorialsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="farmingTutorialsModalLabel">Farming Tutorial Videos</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Video Thumbnail Grid -->
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="videoThumbnailGrid">
+                    <!-- Video 1 -->
+                    <div class="col">
+                        <div class="card h-100 shadow-sm video-thumbnail" data-video-id="VWRXQaXjZJ4">
+                            <img src="https://img.youtube.com/vi/VWRXQaXjZJ4/mqdefault.jpg" class="card-img-top" alt="Organic Farming">
+                            <div class="card-body">
+                                <h5 class="card-title">Organic Farming Basics</h5>
+                                <p class="card-text">Learn the fundamentals of organic farming practices for sustainable agriculture.</p>
+                                <div class="play-button"><i class="fas fa-play-circle"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 2 -->
+                    <div class="col">
+                        <div class="card h-100 shadow-sm video-thumbnail" data-video-id="IoCVrkcaH6Q">
+                            <img src="https://img.youtube.com/vi/IoCVrkcaH6Q/mqdefault.jpg" class="card-img-top" alt="Soil Preparation">
+                            <div class="card-body">
+                                <h5 class="card-title">Soil Preparation Techniques</h5>
+                                <p class="card-text">Proper soil preparation methods for optimal crop growth and yield.</p>
+                                <div class="play-button"><i class="fas fa-play-circle"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 3 -->
+                    <div class="col">
+                        <div class="card h-100 shadow-sm video-thumbnail" data-video-id="9OLQZ0bY2X0">
+                            <img src="https://img.youtube.com/vi/9OLQZ0bY2X0/mqdefault.jpg" class="card-img-top" alt="Drip Irrigation">
+                            <div class="card-body">
+                                <h5 class="card-title">Drip Irrigation System</h5>
+                                <p class="card-text">Complete guide to installing and maintaining a drip irrigation system.</p>
+                                <div class="play-button"><i class="fas fa-play-circle"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 4 -->
+                    <div class="col">
+                        <div class="card h-100 shadow-sm video-thumbnail" data-video-id="hWkYtZxpQUo">
+                            <img src="https://img.youtube.com/vi/hWkYtZxpQUo/mqdefault.jpg" class="card-img-top" alt="Pest Control">
+                            <div class="card-body">
+                                <h5 class="card-title">Natural Pest Control</h5>
+                                <p class="card-text">Organic methods to protect your crops from pests without chemicals.</p>
+                                <div class="play-button"><i class="fas fa-play-circle"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 5 -->
+                    <div class="col">
+                        <div class="card h-100 shadow-sm video-thumbnail" data-video-id="8vZPHbAIqUQ">
+                            <img src="https://img.youtube.com/vi/8vZPHbAIqUQ/mqdefault.jpg" class="card-img-top" alt="Compost Making">
+                            <div class="card-body">
+                                <h5 class="card-title">Compost Making at Home</h5>
+                                <p class="card-text">Step-by-step guide to creating nutrient-rich compost for your farm.</p>
+                                <div class="play-button"><i class="fas fa-play-circle"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 6 -->
+                    <div class="col">
+                        <div class="card h-100 shadow-sm video-thumbnail" data-video-id="9JpZRYxR0WY">
+                            <img src="https://img.youtube.com/vi/9JpZRYxR0WY/mqdefault.jpg" class="card-img-top" alt="Vertical Farming">
+                            <div class="card-body">
+                                <h5 class="card-title">Vertical Farming Techniques</h5>
+                                <p class="card-text">Innovative space-saving farming methods for urban environments.</p>
+                                <div class="play-button"><i class="fas fa-play-circle"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 7 -->
+                    <div class="col">
+                        <div class="card h-100 shadow-sm video-thumbnail" data-video-id="8vZPHbAIqUQ">
+                            <img src="https://img.youtube.com/vi/8vZPHbAIqUQ/mqdefault.jpg" class="card-img-top" alt="Tomato Farming">
+                            <div class="card-body">
+                                <h5 class="card-title">Tomato Farming Guide</h5>
+                                <p class="card-text">Complete tutorial from planting to harvesting tomatoes successfully.</p>
+                                <div class="play-button"><i class="fas fa-play-circle"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 8 -->
+                    <div class="col">
+                        <div class="card h-100 shadow-sm video-thumbnail" data-video-id="9OLQZ0bY2X0">
+                            <img src="https://img.youtube.com/vi/9OLQZ0bY2X0/mqdefault.jpg" class="card-img-top" alt="Greenhouse Farming">
+                            <div class="card-body">
+                                <h5 class="card-title">Greenhouse Farming Basics</h5>
+                                <p class="card-text">How to start and maintain a productive greenhouse farm.</p>
+                                <div class="play-button"><i class="fas fa-play-circle"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 9 -->
+                    <div class="col">
+                        <div class="card h-100 shadow-sm video-thumbnail" data-video-id="hWkYtZxpQUo">
+                            <img src="https://img.youtube.com/vi/hWkYtZxpQUo/mqdefault.jpg" class="card-img-top" alt="Aquaponics">
+                            <div class="card-body">
+                                <h5 class="card-title">Aquaponics System Setup</h5>
+                                <p class="card-text">Combining fish farming with hydroponics for sustainable food production.</p>
+                                <div class="play-button"><i class="fas fa-play-circle"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video 10 -->
+                    <div class="col">
+                        <div class="card h-100 shadow-sm video-thumbnail" data-video-id="VWRXQaXjZJ4">
+                            <img src="https://img.youtube.com/vi/VWRXQaXjZJ4/mqdefault.jpg" class="card-img-top" alt="Harvesting">
+                            <div class="card-body">
+                                <h5 class="card-title">Proper Harvesting Techniques</h5>
+                                <p class="card-text">Learn when and how to harvest different crops for best quality and yield.</p>
+                                <div class="play-button"><i class="fas fa-play-circle"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Full Video Player (hidden initially) -->
+                <div class="full-video-player" id="fullVideoPlayer" style="display: none;">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="videoFrame" src="" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info mt-3">
+                        <h4 id="videoTitle"></h4>
+                        <p id="videoDescription"></p>
+                        <button class="btn btn-secondary mt-2" id="backToThumbnails">
+                            <i class="fas fa-arrow-left"></i> Back to Videos
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close Tutorials</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .video-thumbnail {
+        cursor: pointer;
+        transition: transform 0.3s;
+        position: relative;
+    }
+    .video-thumbnail:hover {
+        transform: translateY(-5px);
+    }
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-shadow: 0 0 10px rgba(0,0,0,0.5);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .video-thumbnail:hover .play-button {
+        opacity: 1;
+    }
+    .full-video-player {
+        margin-top: 20px;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle video thumbnail clicks
+    const thumbnails = document.querySelectorAll('.video-thumbnail');
+    const videoGrid = document.getElementById('videoThumbnailGrid');
+    const fullVideoPlayer = document.getElementById('fullVideoPlayer');
+    const videoFrame = document.getElementById('videoFrame');
+    const videoTitle = document.getElementById('videoTitle');
+    const videoDescription = document.getElementById('videoDescription');
+    const backButton = document.getElementById('backToThumbnails');
+    
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+            const videoId = this.getAttribute('data-video-id');
+            const title = this.querySelector('.card-title').textContent;
+            const description = this.querySelector('.card-text').textContent;
+            
+            // Load the selected video
+            videoFrame.src = https://www.youtube.com/embed/${videoId}?autoplay=1;
+            videoTitle.textContent = title;
+            videoDescription.textContent = description;
+            
+            // Switch views
+            videoGrid.style.display = 'none';
+            fullVideoPlayer.style.display = 'block';
+        });
+    });
+    
+    // Handle back button
+    backButton.addEventListener('click', function() {
+        // Pause video and clear source
+        videoFrame.src = '';
+        
+        // Switch views
+        videoGrid.style.display = 'flex';
+        fullVideoPlayer.style.display = 'none';
+    });
+    
+    // Reset when modal is closed
+    const modal = document.getElementById('farmingTutorialsModal');
+    modal.addEventListener('hidden.bs.modal', function () {
+        videoFrame.src = '';
+        videoGrid.style.display = 'flex';
+        fullVideoPlayer.style.display = 'none';
+    });
+});
+</script>
+
+                <!-- Search Help Modal -->
+
+
+                <!-- Market Prices Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card text-center p-4 h-100" data-bs-toggle="modal" data-bs-target="#marketModal"
+                        style="background-image: url('https://i.pinimg.com/736x/de/01/39/de01390f37f551dbcd4d7aedaa4a59ce.jpg');background-size: cover; background-position: center; background-repeat: no-repeat;">
+                        <div class="service-icon mb-4">
+                            <div class="icon-container bg-purple-light">
+                                <i class="fas fa-chart-line text-purple"></i>
+                            </div>
+                        </div>
+                        <h3 id="market_prices_header" class="fw-bold">Market Prices</h3>
+                        <p id="market_prices_description" class="fw-bold">Commodity prices and market trends</p>
+                        <div class="mt-3">
+                            <span id="market_prices_button" class="btn btn-outline-purple rounded-pill px-4">View
+                                Prices</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Modal -->
+    <div class="modal fade" id="weatherModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content overflow-hidden">
+                <div class="modal-header bg-primary text-white">
+                    <h5 id="weather_modal_header" class="modal-title"><i class="fas fa-cloud-sun-rain me-2"></i> Weather
+                        Information Center</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <div class="col-md-5 weather-modal-sidebar">
+                            <div class="p-4 h-100 d-flex flex-column">
+                                <img src="https://images.unsplash.com/photo-1561484930-974554019ade?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    class="img-fluid mb-4 rounded-3 shadow" alt="Weather">
+                                <div id="weather_modal_info" class="alert alert-primary bg-primary-light border-0">
+                                    <i class="fas fa-info-circle me-2"></i> Real-time updates every 15 minutes
+                                </div>
+                                <div class="mt-auto">
+                                    <h5 id="weather_alerts_header" class="fw-bold">Need urgent weather alerts?</h5>
+                                    <button id="weather_alerts_button" class="btn btn-primary w-100 mt-2">
+                                        <i class="fas fa-bell me-2"></i>Enable Notifications
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="p-4">
+                                <h4 id="farm_weather_intelligence_header" class="text-primary fw-bold">Farm Weather
+                                    Intelligence</h4>
+                                <p id="farm_weather_intelligence_description" class="text-muted">Protect your crops with
+                                    accurate weather predictions tailored for
+                                    agricultural needs:</p>
+                                <ul class="fa-ul mb-4">
+                                    <li id="precision_rainfall_forecasts" class="mb-2"><span class="fa-li"><i
+                                                class="fas fa-check-circle text-primary"></i></span>Precision rainfall
+                                        forecasts</li>
+                                    <li id="temperature_humidity_alerts" class="mb-2"><span class="fa-li"><i
+                                                class="fas fa-check-circle text-primary"></i></span>Temperature &
+                                        humidity alerts</li>
+                                    <li id="storm_hail_warnings" class="mb-2"><span class="fa-li"><i
+                                                class="fas fa-check-circle text-primary"></i></span>Storm & hail
+                                        warnings</li>
+                                    <li id="frost_heatwave_advisories" class="mb-2"><span class="fa-li"><i
+                                                class="fas fa-check-circle text-primary"></i></span>Frost & heatwave
+                                        advisories</li>
+                                    <li id="optimal_planting_windows" class="mb-2"><span class="fa-li"><i
+                                                class="fas fa-check-circle text-primary"></i></span>Optimal planting
+                                        windows</li>
+                                </ul>
+
+                                <div class="weather-check-section p-4 bg-light rounded-3">
+                                    <h5 id="check_local_weather_header" class="mb-3 fw-bold">Check Your Local Weather
+                                    </h5>
+                                    <div class="input-group mb-3">
+                                        <input type="text" id="modalLocationInput" class="form-control"
+                                            placeholder="Enter your village or district">
+                                        <button id="check_weather_button" class="btn btn-primary"
+                                            onclick="getWeather(true)">
+                                            <i class="fas fa-search me-2"></i> Check
+                                        </button>
+                                    </div>
+                                    <div id="modalWeatherResult" class="text-center"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button id="close_weather_modal_button" type="button" class="btn btn-outline-secondary"
+                        data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other Modals would go here (similar structure but customized for each service) -->
+
+    <style>
+        /* General Styles */
+        .text-gradient {
+            background: linear-gradient(90deg, #2e7d32, #4caf50);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Service Cards */
+        .service-card {
+            border-radius: 12px;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .bg-success-light {
+            background-color: rgba(46, 125, 50, 0.1);
+        }
+
+        .bg-primary-light {
+            background-color: rgba(33, 150, 243, 0.1);
+        }
+
+        .bg-info-light {
+            background-color: rgba(23, 162, 184, 0.1);
+        }
+
+        .bg-warning-light {
+            background-color: rgba(255, 193, 7, 0.1);
+        }
+
+        .bg-danger-light {
+            background-color: rgba(220, 53, 69, 0.1);
+        }
+
+        .bg-purple-light {
+            background-color: rgba(103, 58, 183, 0.1);
+        }
+
+        .service-card:hover .icon-container {
+            transform: scale(1.1);
+        }
+
+        /* Weather Card Specific */
+        .weather-card {
+            border: 1px solid rgba(33, 150, 243, 0.2);
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9f5e9 100%);
+        }
+
+        .weather-icon {
+            color: #2196f3;
+        }
+
+        .weather-icon-img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .weather-preview-content {
+            background-color: rgba(33, 150, 243, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* Weather Content Container */
+        .weather-content-container {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Forecast Scroll */
+        .forecast-scroll {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .forecast-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .forecast-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .forecast-scroll::-webkit-scrollbar-thumb {
+            background: #ddd;
+            border-radius: 10px;
+        }
+
+        .forecast-scroll::-webkit-scrollbar-thumb:hover {
+            background: #ccc;
+        }
+
+        /* Modal Styles */
+        .weather-modal-sidebar {
+            background-color: #f8f9fa;
+        }
+
+        .bg-primary-light {
+            background-color: rgba(33, 150, 243, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .weather-service-container .col-lg-8 {
+                margin-top: 20px;
+            }
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script>
+        const API_KEY = "cb3c233664994e8c909175943250606";
+        let chartInstance = null;
+
+        // Initialize card animations
+        document.querySelectorAll('.service-card').forEach((card, index) => {
+            card.classList.add('animate-card');
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+
+        // Update the card after checking weather
+        function updateWeatherCard(data) {
+            const card = document.querySelector('.weather-card');
+            const weatherPreview = document.getElementById('weatherPreview');
+            const defaultText = card.querySelector('.default-text');
+            const checkWeatherText = card.querySelector('.check-weather-text');
+
+            // Update weather preview
+            document.getElementById('weatherLocation').textContent = `${data.location.name}`;
+            document.getElementById('weatherTemp').textContent = `${data.current.temp_c}°C`;
+            document.getElementById('weatherCondition').textContent = data.current.condition.text;
+            document.getElementById('weatherIcon').src = data.current.condition.icon;
+
+            // Show chance of rain if available
+            const rainChance = data.forecast.forecastday[0].day.daily_chance_of_rain;
+            document.getElementById('rainChance').textContent = rainChance ? `Rain chance: ${rainChance}%` : '';
+
+            // Show weather preview and update CTA
+            weatherPreview.classList.remove('d-none');
+            defaultText.classList.add('d-none');
+            checkWeatherText.classList.remove('d-none');
+
+            // Add animation
+            anime({
+                targets: card,
+                scale: [0.95, 1],
+                duration: 500,
+                easing: 'easeOutElastic'
+            });
+        }
+
+        async function getWeather(fromModal = false) {
+            const location = fromModal
+                ? document.getElementById("modalLocationInput").value
+                : document.getElementById("locationInput").value;
+
+            if (!location) {
+                showAlert("Please enter a location", "warning");
+                return;
+            }
+
+            try {
+                // Show loading state
+                if (fromModal) {
+                    document.getElementById("modalWeatherResult").innerHTML = `
+                    <div class="text-center py-3">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2 mb-0">Fetching weather data...</p>
+                    </div>
+                `;
+                } else {
+                    document.getElementById("currentWeather").innerHTML = `
+                    <div class="text-center py-3">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2 mb-0">Fetching weather data...</p>
+                    </div>
+                `;
+                }
+
+                const response = await fetch(
+                    `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=7&aqi=no&alerts=no`
+                );
+                const data = await response.json();
+
+                if (fromModal) {
+                    // Update modal result
+                    const current = data.current;
+                    const rainChance = data.forecast.forecastday[0].day.daily_chance_of_rain;
+                    document.getElementById("modalWeatherResult").innerHTML = `
+                    <div class="alert alert-primary">
+                        <h5 class="fw-bold">${data.location.name}, ${data.location.country}</h5>
+                        <div class="d-flex justify-content-center align-items-center my-3">
+                            <img src="${current.condition.icon}" alt="weather icon" style="width: 60px;" />
+                            <h2 class="ms-4 mb-0">${current.temp_c}°C</h2>
+                        </div>
+                        <p class="mb-1"><strong>${current.condition.text}</strong></p>
+                        <p class="mb-1">Humidity: ${current.humidity}% | Wind: ${current.wind_kph} km/h</p>
+                        ${rainChance ? `<p class="mb-0 fw-bold text-primary">Rain chance: ${rainChance}%</p>` : ''}
+                    </div>
+                `;
+                } else {
+                    // Current Weather
+                    const current = data.current;
+                    const rainChance = data.forecast.forecastday[0].day.daily_chance_of_rain;
+                    document.getElementById("currentWeather").innerHTML = `
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h2 class="fw-bold">${data.location.name}, ${data.location.country}</h2>
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="${current.condition.icon}" alt="weather icon" style="width: 80px;" />
+                                <h1 class="ms-4 mb-0 display-3 fw-bold">${current.temp_c}°C</h1>
+                            </div>
+                            <p class="mb-1"><strong>${current.condition.text}</strong></p>
+                            <p class="text-muted">Humidity: ${current.humidity}% | Wind: ${current.wind_kph} km/h</p>
+                            ${rainChance ? `<p class="text-primary fw-bold">Rain chance today: ${rainChance}%</p>` : ''}
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-around bg-primary-light p-3 rounded-3">
+                                <div class="text-center">
+                                    <p class="mb-1 small text-muted">Feels Like</p>
+                                    <h4 class="fw-bold">${current.feelslike_c}°C</h4>
+                                </div>
+                                <div class="text-center">
+                                    <p class="mb-1 small text-muted">UV Index</p>
+                                    <h4 class="fw-bold">${current.uv}</h4>
+                                </div>
+                                <div class="text-center">
+                                    <p class="mb-1 small text-muted">Visibility</p>
+                                    <h4 class="fw-bold">${current.vis_km} km</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                    // Forecast
+                    const forecastHTML = [];
+                    const labels = [];
+                    const maxTemps = [];
+                    const minTemps = [];
+                    const rainChances = [];
+
+                    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+                    data.forecast.forecastday.forEach((dayData) => {
+                        const date = new Date(dayData.date);
+                        const dayName = days[date.getDay()];
+                        const maxTemp = dayData.day.maxtemp_c;
+                        const minTemp = dayData.day.mintemp_c;
+                        const rainChance = dayData.day.daily_chance_of_rain;
+
+                        labels.push(dayName);
+                        maxTemps.push(maxTemp);
+                        minTemps.push(minTemp);
+                        rainChances.push(rainChance);
+
+                        forecastHTML.push(`
+                        <div class="forecast-item bg-white p-3 rounded-3 shadow-sm" style="min-width: 120px;">
+                            <h5 class="fw-bold text-center">${dayName}</h5>
+                            <img src="${dayData.day.condition.icon}" alt="icon" class="d-block mx-auto my-2" />
+                            <p class="text-center mb-0"><strong class="text-primary">${maxTemp}°</strong> / ${minTemp}°</p>
+                            <p class="text-center small fw-bold mt-1 ${rainChance > 50 ? 'text-danger' : 'text-primary'}">${rainChance}% rain</p>
+                        </div>
+                    `);
+                    });
+
+                    document.getElementById("forecastList").innerHTML = forecastHTML.join("");
+
+                    // Chart
+                    const ctx = document.getElementById("weatherChart").getContext("2d");
+                    if (chartInstance) chartInstance.destroy();
+
+                    chartInstance = new Chart(ctx, {
+                        type: "bar",
+                        data: {
+                            labels: labels,
+                            datasets: [
+                                {
+                                    label: "Max Temp (°C)",
+                                    data: maxTemps,
+                                    backgroundColor: "#4caf50",
+                                    borderRadius: 6,
+                                    yAxisID: 'y'
+                                },
+                                {
+                                    label: "Min Temp (°C)",
+                                    data: minTemps,
+                                    backgroundColor: "#81c784",
+                                    borderRadius: 6,
+                                    yAxisID: 'y'
+                                },
+                                {
+                                    label: "Rain Chance (%)",
+                                    data: rainChances,
+                                    backgroundColor: "#2196f3",
+                                    borderRadius: 6,
+                                    type: 'line',
+                                    borderColor: '#2196f3',
+                                    borderWidth: 3,
+                                    pointBackgroundColor: '#2196f3',
+                                    pointRadius: 5,
+                                    yAxisID: 'y1'
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: "7-Day Weather Forecast",
+                                    color: "#2d572c",
+                                    font: {
+                                        size: 16
+                                    }
+                                },
+                                legend: {
+                                    labels: {
+                                        color: "#2d572c",
+                                        usePointStyle: true,
+                                        pointStyle: 'circle'
+                                    }
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function (context) {
+                                            let label = context.dataset.label || '';
+                                            if (label) {
+                                                label += ': ';
+                                            }
+                                            label += context.raw;
+                                            if (context.dataset.label.includes('Temp')) {
+                                                label += '°C';
+                                            } else {
+                                                label += '%';
+                                            }
+                                            return label;
+                                        }
+                                    }
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    ticks: {
+                                        color: "#2d572c"
+                                    },
+                                    grid: {
+                                        display: false
+                                    }
+                                },
+                                y: {
+                                    title: {
+                                        display: true,
+                                        text: "Temperature (°C)",
+                                        color: "#2d572c"
+                                    },
+                                    ticks: {
+                                        color: "#2d572c"
+                                    },
+                                    position: 'left'
+                                },
+                                y1: {
+                                    title: {
+                                        display: true,
+                                        text: "Rain Chance (%)",
+                                        color: "#2196f3"
+                                    },
+                                    ticks: {
+                                        color: "#2196f3",
+                                        callback: function (value) {
+                                            return value + '%';
+                                        }
+                                    },
+                                    position: 'right',
+                                    grid: {
+                                        drawOnChartArea: false
+                                    },
+                                    min: 0,
+                                    max: 100
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Always update the card
+                updateWeatherCard(data);
+
+            } catch (error) {
+                console.error("Error fetching weather:", error);
+                showAlert("Failed to get weather data. Please try again.", "danger");
+
+                if (fromModal) {
+                    document.getElementById("modalWeatherResult").innerHTML = `
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-circle me-2"></i>
+                        Failed to get weather data. Please try again.
+                    </div>
+                `;
+                } else {
+                    document.getElementById("currentWeather").innerHTML = `
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-circle me-2"></i>
+                        Failed to get weather data. Please try again.
+                    </div>
+                `;
+                }
+            }
+        }
+
+        function showAlert(message, type) {
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${type} alert-dismissible fade show`;
+            alert.innerHTML = `
+            <i class="fas fa-exclamation-circle me-2"></i>
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+
+            const container = document.querySelector('.container');
+            container.prepend(alert);
+
+            setTimeout(() => {
+                alert.classList.remove('show');
+                setTimeout(() => alert.remove(), 150);
+            }, 5000);
+        }
+
+        // Initialize with sample location if needed
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     getWeather();
+        // });
+    </script>
+
+    <!-- Features Tabs -->
+    <section class="feature-tabs text-white text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 py-3">
+                    <i class="fas fa-recycle fa-2x mb-2"></i>
+                    <h4 id="card1">Organic Recycling</h4>
+                </div>
+                <div class="col-md-3 py-3">
+                    <i class="fas fa-leaf fa-2x mb-2"></i>
+                    <h4 id="card2">Environmental Care</h4>
+                </div>
+                <div class="col-md-3 py-3">
+                    <i class="fas fa-solar-panel fa-2x mb-2"></i>
+                    <h4 id="card3">Renewable Energy</h4>
+                </div>
+                <div class="col-md-3 py-3">
+                    <i class="fas fa-globe-asia fa-2x mb-2"></i>
+                    <h4 id="card4">Green Future</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="main.jpg" alt="farmer working in field" class="info-img">
+                </div>
+                <div class="col-lg-6">
+                    <div class="info-content-box">
+                        <h2 id="info_heading" class="mb-4">Sustainable Farming for a Greener Future</h2>
+                        <p id="info_description" class="mb-4">Kisan Saathi is committed to providing farmers with
+                            environmentally sustainable
+                            solutions that benefit both their livelihoods and the planet.</p>
+                        <ul class="mb-4 list-unstyled">
+                            <li id="info_li_1" class="mb-3"><i
+                                    class="fas fa-check-circle text-success me-2"></i><strong>Economic
+                                    Benefits:</strong> Increase yields while reducing costs</li>
+                            <li id="info_li_2" class="mb-3"><i
+                                    class="fas fa-check-circle text-success me-2"></i><strong>Safe
+                                    Environment:</strong> Eco-friendly practices that protect nature</li>
+                            <li id="info_li_3" class="mb-3"><i
+                                    class="fas fa-check-circle text-success me-2"></i><strong>Community
+                                    Support:</strong> Connecting farmers with resources</li>
+                            <li id="info_li_4" class="mb-3"><i
+                                    class="fas fa-check-circle text-success me-2"></i><strong>Future
+                                    Ready:</strong> Sustainable solutions for generations to come</li>
+                        </ul>
+                        <a href="#services" id="our_services" class="btn btn-success btn-lg px-4">Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section bg-light py-5" id="services">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 id="agri-services-heading" class="mb-3">Our Agricultural Services</h2>
+                <p id="agri-services-description" class="lead">Providing farmers with the best sustainable solutions</p>
+            </div>
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://i.pinimg.com/736x/45/bc/10/45bc104cc9894f86d8c0ba3fedc3509a.jpg"
+                            class="card-img-top img-fluid service-img" alt="Organic Recycling">
+                        <div class="card-body">
+                            <h5 id="service1" class="card-title">Organic Waste Recycling</h5>
+                            <p id="service1-description" class="card-text">Innovative solutions that convert farm waste
+                                into valuable compost and
+                                biofertilizers.</p>
+                            <a href="#" class="btn btn-outline-success learnMore">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://i.pinimg.com/736x/f8/40/87/f84087424ffc2eb2efd09f755adbaa9a.jpg"
+                            class="card-img-top img-fluid service-img" alt="Eco-Friendly Farming">
+                        <div class="card-body">
+                            <h5 id="service2" class="card-title">Eco-Friendly Farming</h5>
+                            <p id="service2-description" class="card-text">Sustainable agricultural practices that
+                                maintain soil health and
+                                biodiversity.</p>
+                            <a href="#" class="btn btn-outline-success learnMore">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://i.pinimg.com/736x/41/12/75/411275ca1949af1da1254d642b41d9d5.jpg"
+                            class="card-img-top img-fluid service-img" alt="Water Conservation">
+                        <div class="card-body">
+                            <h5 id="service3" class="card-title">Water Conservation</h5>
+                            <p id="service3-description" class="card-text">Efficient irrigation techniques that reduce
+                                water usage while improving
+                                crop yields.</p>
+                            <a href="#" class="btn btn-outline-success learnMore">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .service-img {
+                height: 400px;
+                object-fit: cover;
+            }
+        </style>
+    </section>
+
+
+    <!-- Progress Section -->
+    <section class="progress-section text-center">
+        <div class="container">
+            <h2 id="progress-heading" class="mb-4">Our Impact on Sustainable Agriculture</h2>
+            <p id="progress-description" class="mb-5">We're committed to creating eco-safe solutions for farmers and a
+                better world for all.</p>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h5 id="progress1" class="mb-3">Organic Farming Adoption</h5>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
+                            aria-valuemin="0" aria-valuemax="100">90%</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h5 id="progress2" class="mb-3">Water Conservation</h5>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                            aria-valuemin="0" aria-valuemax="100">85%</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h5 id="progress3" class="mb-3">Farmer Income Increase</h5>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                            aria-valuemin="0" aria-valuemax="100">75%</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h5 id="progress4" class="mb-3">Chemical Use Reduction</h5>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                            aria-valuemin="0" aria-valuemax="100">80%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-4">
+                    <h2 id="contact_heading" class="fw-bold">Contact <span style="color:#28a745;">Kisan Saathi</span>
+                    </h2>
+                    <p id="contact_description" class="text-muted">Get in touch with our agricultural experts</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="contactForm" class="p-4 p-md-5 form-section" action="https://api.web3forms.com/submit"
+                        method="POST">
+                        <input type="hidden" name="access_key" value="ebadf86d-0549-4810-9c1f-ef1eb37caaf2">
+                        <input type="hidden" name="subject" value="New Contact from Kisan Saathi">
+                        <input type="checkbox" name="botcheck" style="display: none;">
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label id="contact_name_label" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label id="contact_phone_label" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" name="phone" placeholder="+91 98765 43210"
+                                    required>
+                            </div>
+                            <div class="col-12">
+                                <label id="contact_email_label" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" name="email" placeholder="email@example.com"
+                                    required>
+                            </div>
+                            <div class="col-12">
+                                <label id="contact_message_label" class="form-label">Your Message</label>
+                                <textarea class="form-control" name="message" rows="5"
+                                    placeholder="Enter your query here..." required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button id="contact_submit_button" type="submit"
+                                    class="btn btn-success w-100 py-2 mt-3">Submit Inquiry</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="checkmark">✅</div>
+                <h5 id="successModalLabel" class="mt-3">Submission Successful</h5>
+                <p id="successModalDescription">Thank you! We will contact you soon.</p>
+                <button id="successModalCloseButton" type="button" class="btn btn-success mt-3"
+                    data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="error-icon">❌</div>
+                <h5 id="errorModalLabel" class="mt-3 text-danger">Submission Failed</h5>
+                <p id="errorModalDescription">There was an issue submitting your form. Please try again later.</p>
+                <button id="errorModalCloseButton" type="button" class="btn btn-danger mt-3"
+                    data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        .form-section {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 0 20px rgba(0, 128, 0, 0.1);
+        }
+
+        .modal-content {
+            border-radius: 1rem;
+            text-align: center;
+        }
+
+        .checkmark {
+            font-size: 4rem;
+            color: #28a745;
+        }
+
+        .error-icon {
+            font-size: 4rem;
+            color: #dc3545;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border: none;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+    </style>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Form Submit Script -->
+    <script>
+        const form = document.getElementById('contactForm');
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
+                const result = await response.json();
+
+                if (result.success) {
+                    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                    successModal.show();
+                    form.reset();
+                } else {
+                    const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                    errorModal.show();
+                }
+            } catch (error) {
+                const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                errorModal.show();
+                console.error("Submission error:", error);
+            }
+        });
+    </script>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 id="footerKisanHeading">Kisan Saathi</h5>
+                    <p id="footerKisanDescription">Empowering farmers with sustainable agricultural solutions for a
+                        greener tomorrow.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 id="footerQuickLinksHeading">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a id="footerAboutLink" href="#about" class="text-white">About Us</a></li>
+                        <li><a id="footerServicesLink" href="#services" class="text-white">Services</a></li>
+                        <li><a id="footerContactLink" href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 id="footerConnectHeading">Connect With Us</h5>
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Kisan Saathi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="multiLang.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission handling
+        // document.querySelector('form').addEventListener('submit', function (e) {
+        //     e.preventDefault();
+        //     alert('Thank you for your inquiry! We will contact you shortly.');
+        //     this.reset();
+        // });
+        function submitFeedbackToSpreadsheet(feedbackData) {
+            const formData = new FormData();
+            formData.append('Name', feedbackData.name);
+            formData.append('Email', feedbackData.email);
+            formData.append('FeedbackType', feedbackData.type);
+            formData.append('Subject', feedbackData.subject);
+            formData.append('Message', feedbackData.message);
+            formData.append('ContactPermission', feedbackData.contactPermission ? 'Yes' : 'No');
+            formData.append('Timestamp', new Date().toISOString());
+            formData.append('sheet', 'feedback details'); // Sheet name for feedback
+
+            fetch(`https://script.google.com/macros/s/AKfycbwxiX2mLT4vgbbPFUpOLyz03ep7RuDXl3OB3YmwqKr06GeVIyLbnQzxvylE7o9FVoM/exec`, {
+                method: 'POST',
+                body: new URLSearchParams(formData)
+            })
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Feedback saved successfully:', data);
+                    // Show success message to user
+                    document.getElementById('feedbackForm').style.display = 'none';
+                    document.getElementById('feedbackLoading').style.display = 'none';
+                    document.getElementById('feedbackSuccess').style.display = 'block';
+                })
+                .catch(error => {
+                    console.error('Error saving feedback:', error);
+                    // Show error message to user
+                    document.getElementById('feedbackLoading').style.display = 'none';
+                    document.getElementById('errorMessage').textContent = 'Failed to submit feedback. Please try again.';
+                    document.getElementById('feedbackError').style.display = 'block';
+                });
+        } 
+    </script>
+</body>
+
+</html>
